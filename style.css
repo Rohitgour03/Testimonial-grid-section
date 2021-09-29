@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: rgb(228, 234, 252);
+}
+
+img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.main_container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testimonial_section{
+    border-radius: 5px;
+    background-color: aquamarine;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+}
+
+.content_container{
+    width: 80%;
+    margin: 1em auto;
+}
+
+.profile_section{
+    margin: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_pic{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.profile_section{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+}
+
+.name_container{
+    margin-left: 1rem;
+}
+
+.name{
+    margin: 0;
+}
+
+.verified_status{
+    margin: 0 auto;
+    opacity: 50%;
+}
+
+.section_01{
+    background-color: hsl(263, 55%, 52%);
+    color:  hsl(0, 0%, 100%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+}
+
+.description_text{
+    opacity: 70%;
+    line-height: 1.5;
+}
+
+.section_02{
+    background-color:  hsl(217, 19%, 35%);
+    color: #fff;
+}
+
+.section_03{
+    background: #fff;
+    color: hsl(219, 29%, 14%);
+}
+
+.section_04{
+    background: hsl(219, 29%, 14%);
+    color: #fff;
+}
+
+.section_05{
+    background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+
+    body{
+        height: 100vh;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .main_container{
+
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            " first first second fifth"
+            " third fourth fourth fifth"
+        ;
+        gap: 1rem;
+    }
+
+    .content_container{
+       width: auto;
+       margin: 1em 2rem;
+    }
+    .testimonial_section{
+        margin: 0;
+    }
+
+    .section_01{
+        grid-area: first;
+    }
+    .section_02{
+        grid-area: second;
+    }
+    .section_03{
+        grid-area: third;
+    }
+    .section_04{
+        grid-area: fourth;
+    }
+    .section_05{
+        grid-area: fifth;
+    }
+
+}
